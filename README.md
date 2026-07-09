@@ -1,0 +1,1 @@
+# vk-cloud-cdn-setup
