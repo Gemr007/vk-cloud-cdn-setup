@@ -41,23 +41,7 @@ TLS есть только между клиентом и CDN. Между CDN и 
 ## Запуск скрипта
 
 ```bash
-git clone <ваш форк/репозиторий>
-cd <репозиторий>
-chmod +x setup-cdn-bridge.sh
-sudo bash setup-cdn-bridge.sh
-```
-
-Появится меню на 4 этапа. Их можно проходить по одному (`nginx`, `node`,
-`files`, `check` как аргумент) или все сразу (`all`). Между запусками
-состояние сохраняется в `/root/.cdn-bridge/state.env` — если что-то
-прервалось или нужно поменять только один параметр, скрипт предложит уже
-введённые значения по умолчанию.
-
-```bash
-sudo bash setup-cdn-bridge.sh nginx   # этап 1
-sudo bash setup-cdn-bridge.sh node    # этап 2
-sudo bash setup-cdn-bridge.sh files   # этап 3
-sudo bash setup-cdn-bridge.sh check   # этап 4
+sudo bash <(curl -Ls https://raw.githubusercontent.com/Gemr007/vk-cloud-cdn-setup/refs/heads/main/setup-cdn-bridge.sh) all
 ```
 
 ---
